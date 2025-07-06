@@ -1,0 +1,4 @@
+1-st Screenshot - starting the server.
+2-nd Screenshot - starting the keylogger ( on the target host - in our case our own VM )
+3-rd Screenshot - opening a random terminal and writing a random text
+4-th Screenshot - reading the output using a decoder which shows us the contents of the log file.
